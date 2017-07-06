@@ -1,0 +1,16 @@
+[2017-07-06 15:35:08,758][ceph_deploy.conf][DEBUG ] found configuration file at: /home/ubuntu/.cephdeploy.conf
+[2017-07-06 15:35:08,758][ceph_deploy.cli][INFO  ] Invoked (1.5.37): /home/ubuntu/bin/ceph-deploy rgw create gdb0
+[2017-07-06 15:35:08,758][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2017-07-06 15:35:08,758][ceph_deploy.cli][INFO  ]  username                      : None
+[2017-07-06 15:35:08,758][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2017-07-06 15:35:08,758][ceph_deploy.cli][INFO  ]  rgw                           : [('gdb0', 'rgw.gdb0')]
+[2017-07-06 15:35:08,758][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2017-07-06 15:35:08,758][ceph_deploy.cli][INFO  ]  subcommand                    : create
+[2017-07-06 15:35:08,758][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2017-07-06 15:35:08,758][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf instance at 0x7f3357be9830>
+[2017-07-06 15:35:08,759][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2017-07-06 15:35:08,759][ceph_deploy.cli][INFO  ]  func                          : <function rgw at 0x7f33582aa758>
+[2017-07-06 15:35:08,759][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2017-07-06 15:35:08,759][ceph_deploy.cli][INFO  ]  default_release               : False
+[2017-07-06 15:35:08,759][ceph_deploy][ERROR ] ConfigError: Cannot load config: [Errno 2] No such file or directory: 'ceph.conf'; has `ceph-deploy new` been run in this directory?
+

@@ -1,0 +1,1 @@
+rados -p scbench cleanup

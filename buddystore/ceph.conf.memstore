@@ -1,0 +1,4 @@
+osd_pool_default_size = 2
+osd_objectstore = memstore
+memstore_device_bytes = 1073741824
+

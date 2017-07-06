@@ -1,0 +1,6 @@
+osd_pool_default_size = 1
+osd_objectstore = memstore
+memstore_device_bytes = 1073741824
+
+[osd]
+debug filestore = 10

@@ -1,0 +1,5 @@
+osd_pool_default_size = 2
+
+[osd]
+enable_experimental_unrecoverable_data_corrupting_features = bluestore
+

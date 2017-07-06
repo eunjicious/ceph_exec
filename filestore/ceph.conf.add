@@ -1,0 +1,7 @@
+osd_pool_default_size = 1
+
+[osd]
+debug osd = 5
+debug filestore = 5
+debug journal = 5
+debug monc = 5

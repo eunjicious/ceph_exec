@@ -12151,3 +12151,451 @@
 [2017-07-06 15:54:29,126][ceph_deploy.rgw][ERROR ] RuntimeError: config file /etc/ceph/ceph.conf exists with different content; use --overwrite-conf to overwrite
 [2017-07-06 15:54:29,126][ceph_deploy][ERROR ] GenericError: Failed to create 1 RGWs
 
+[2017-07-08 16:02:30,167][ceph_deploy.conf][DEBUG ] found configuration file at: /home/ubuntu/.cephdeploy.conf
+[2017-07-08 16:02:30,169][ceph_deploy.cli][INFO  ] Invoked (1.5.37): /home/ubuntu/bin/ceph-deploy purge gdb3
+[2017-07-08 16:02:30,169][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2017-07-08 16:02:30,169][ceph_deploy.cli][INFO  ]  username                      : None
+[2017-07-08 16:02:30,169][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2017-07-08 16:02:30,169][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2017-07-08 16:02:30,169][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2017-07-08 16:02:30,169][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf instance at 0x7f1ab66690e0>
+[2017-07-08 16:02:30,169][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2017-07-08 16:02:30,169][ceph_deploy.cli][INFO  ]  host                          : ['gdb3']
+[2017-07-08 16:02:30,169][ceph_deploy.cli][INFO  ]  func                          : <function purge at 0x7f1ab6f761b8>
+[2017-07-08 16:02:30,169][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2017-07-08 16:02:30,170][ceph_deploy.cli][INFO  ]  default_release               : False
+[2017-07-08 16:02:30,170][ceph_deploy.install][INFO  ] note that some dependencies *will not* be removed because they can cause issues with qemu-kvm
+[2017-07-08 16:02:30,170][ceph_deploy.install][INFO  ] like: librbd1 and librados2
+[2017-07-08 16:02:30,170][ceph_deploy.install][DEBUG ] Purging on cluster ceph hosts gdb3
+[2017-07-08 16:02:30,170][ceph_deploy.install][DEBUG ] Detecting platform for host gdb3 ...
+[2017-07-08 16:02:30,206][gdb3][DEBUG ] connection detected need for sudo
+[2017-07-08 16:02:30,233][gdb3][DEBUG ] connected to host: gdb3 
+[2017-07-08 16:02:30,235][gdb3][DEBUG ] detect platform information from remote host
+[2017-07-08 16:02:30,251][gdb3][DEBUG ] detect machine type
+[2017-07-08 16:02:30,253][ceph_deploy.install][INFO  ] Distro info: Ubuntu 16.04 xenial
+[2017-07-08 16:02:30,253][gdb3][INFO  ] Purging Ceph on gdb3
+[2017-07-08 16:02:30,254][gdb3][INFO  ] Running command: sudo env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get --assume-yes -q -f --force-yes remove --purge ceph ceph-mds ceph-common ceph-fs-common radosgw
+[2017-07-08 16:02:30,294][gdb3][DEBUG ] Reading package lists...
+[2017-07-08 16:02:30,458][gdb3][DEBUG ] Building dependency tree...
+[2017-07-08 16:02:30,458][gdb3][DEBUG ] Reading state information...
+[2017-07-08 16:02:30,522][gdb3][DEBUG ] Package 'radosgw' is not installed, so not removed
+[2017-07-08 16:02:30,522][gdb3][DEBUG ] Package 'ceph-fs-common' is not installed, so not removed
+[2017-07-08 16:02:30,522][gdb3][DEBUG ] The following packages were automatically installed and are no longer required:
+[2017-07-08 16:02:30,522][gdb3][DEBUG ]   ceph-fuse javascript-common libcephfs2 libgoogle-perftools4 libjs-jquery
+[2017-07-08 16:02:30,522][gdb3][DEBUG ]   libleveldb1v5 libopts25 libpython2.7 libradosstriper1 librgw2 libsnappy1v5
+[2017-07-08 16:02:30,523][gdb3][DEBUG ]   libtcmalloc-minimal4 libunwind8 linux-aws-headers-4.4.0-1013
+[2017-07-08 16:02:30,523][gdb3][DEBUG ]   linux-aws-headers-4.4.0-1016 linux-aws-headers-4.4.0-1017
+[2017-07-08 16:02:30,523][gdb3][DEBUG ]   linux-aws-headers-4.4.0-1018 linux-headers-4.4.0-1013-aws
+[2017-07-08 16:02:30,523][gdb3][DEBUG ]   linux-headers-4.4.0-1016-aws linux-headers-4.4.0-1017-aws
+[2017-07-08 16:02:30,523][gdb3][DEBUG ]   linux-headers-4.4.0-1018-aws linux-image-4.4.0-1013-aws
+[2017-07-08 16:02:30,523][gdb3][DEBUG ]   linux-image-4.4.0-1016-aws linux-image-4.4.0-1017-aws
+[2017-07-08 16:02:30,523][gdb3][DEBUG ]   linux-image-4.4.0-1018-aws ntp python-blinker python-cephfs
+[2017-07-08 16:02:30,523][gdb3][DEBUG ]   python-cffi-backend python-chardet python-cryptography python-enum34
+[2017-07-08 16:02:30,523][gdb3][DEBUG ]   python-flask python-idna python-ipaddress python-itsdangerous python-jinja2
+[2017-07-08 16:02:30,523][gdb3][DEBUG ]   python-markupsafe python-ndg-httpsclient python-openssl python-pyasn1
+[2017-07-08 16:02:30,523][gdb3][DEBUG ]   python-pyinotify python-rados python-rbd python-requests python-rgw
+[2017-07-08 16:02:30,523][gdb3][DEBUG ]   python-six python-urllib3 python-werkzeug
+[2017-07-08 16:02:30,523][gdb3][DEBUG ] Use 'sudo apt autoremove' to remove them.
+[2017-07-08 16:02:30,539][gdb3][DEBUG ] The following packages will be REMOVED:
+[2017-07-08 16:02:30,539][gdb3][DEBUG ]   ceph* ceph-base* ceph-common* ceph-mds* ceph-mgr* ceph-mon* ceph-osd*
+[2017-07-08 16:02:30,804][gdb3][DEBUG ] 0 upgraded, 0 newly installed, 7 to remove and 61 not upgraded.
+[2017-07-08 16:02:30,804][gdb3][DEBUG ] After this operation, 284 MB disk space will be freed.
+[2017-07-08 16:02:31,269][gdb3][DEBUG ] (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 179644 files and directories currently installed.)
+[2017-07-08 16:02:31,269][gdb3][DEBUG ] Removing ceph-mds (12.0.1-1) ...
+[2017-07-08 16:02:31,440][gdb3][DEBUG ] Purging configuration files for ceph-mds (12.0.1-1) ...
+[2017-07-08 16:02:31,554][gdb3][DEBUG ] Removing ceph (12.0.1-1) ...
+[2017-07-08 16:02:31,586][gdb3][DEBUG ] Removing ceph-osd (12.0.1-1) ...
+[2017-07-08 16:02:31,801][gdb3][DEBUG ] Purging configuration files for ceph-osd (12.0.1-1) ...
+[2017-07-08 16:02:31,915][gdb3][DEBUG ] Removing ceph-mon (12.0.1-1) ...
+[2017-07-08 16:02:32,079][gdb3][DEBUG ] Purging configuration files for ceph-mon (12.0.1-1) ...
+[2017-07-08 16:02:32,193][gdb3][DEBUG ] dpkg: warning: while removing ceph-mon, directory '/var/lib/ceph/mon' not empty so not removed
+[2017-07-08 16:02:32,193][gdb3][DEBUG ] Removing ceph-mgr (12.0.1-1) ...
+[2017-07-08 16:02:32,357][gdb3][DEBUG ] Purging configuration files for ceph-mgr (12.0.1-1) ...
+[2017-07-08 16:02:32,421][gdb3][DEBUG ] dpkg: warning: while removing ceph-mgr, directory '/var/lib/ceph/mgr' not empty so not removed
+[2017-07-08 16:02:32,453][gdb3][DEBUG ] Removing ceph-base (12.0.1-1) ...
+[2017-07-08 16:02:32,618][gdb3][DEBUG ] Purging configuration files for ceph-base (12.0.1-1) ...
+[2017-07-08 16:02:32,618][gdb3][DEBUG ] dpkg: warning: while removing ceph-base, directory '/var/lib/ceph/tmp' not empty so not removed
+[2017-07-08 16:02:32,649][gdb3][DEBUG ] Removing ceph-common (12.0.1-1) ...
+[2017-07-08 16:02:32,814][gdb3][DEBUG ] Purging configuration files for ceph-common (12.0.1-1) ...
+[2017-07-08 16:02:32,878][gdb3][DEBUG ] dpkg: warning: while removing ceph-common, directory '/var/lib/ceph' not empty so not removed
+[2017-07-08 16:02:32,879][gdb3][DEBUG ] Processing triggers for man-db (2.7.5-1) ...
+[2017-07-08 16:02:33,043][gdb3][DEBUG ] Processing triggers for libc-bin (2.23-0ubuntu9) ...
+[2017-07-08 16:02:33,859][gdb3][WARNING] W: --force-yes is deprecated, use one of the options starting with --allow instead.
+[2017-07-08 16:02:34,022][ceph_deploy.conf][DEBUG ] found configuration file at: /home/ubuntu/.cephdeploy.conf
+[2017-07-08 16:02:34,023][ceph_deploy.cli][INFO  ] Invoked (1.5.37): /home/ubuntu/bin/ceph-deploy purgedata gdb3
+[2017-07-08 16:02:34,023][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2017-07-08 16:02:34,023][ceph_deploy.cli][INFO  ]  username                      : None
+[2017-07-08 16:02:34,023][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2017-07-08 16:02:34,023][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2017-07-08 16:02:34,023][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2017-07-08 16:02:34,023][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf instance at 0x7ffb0b9d9758>
+[2017-07-08 16:02:34,023][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2017-07-08 16:02:34,023][ceph_deploy.cli][INFO  ]  host                          : ['gdb3']
+[2017-07-08 16:02:34,023][ceph_deploy.cli][INFO  ]  func                          : <function purgedata at 0x7ffb0c2e6230>
+[2017-07-08 16:02:34,024][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2017-07-08 16:02:34,024][ceph_deploy.cli][INFO  ]  default_release               : False
+[2017-07-08 16:02:34,024][ceph_deploy.install][DEBUG ] Purging data from cluster ceph hosts gdb3
+[2017-07-08 16:02:34,049][gdb3][DEBUG ] connection detected need for sudo
+[2017-07-08 16:02:34,064][gdb3][DEBUG ] connected to host: gdb3 
+[2017-07-08 16:02:34,064][gdb3][DEBUG ] detect platform information from remote host
+[2017-07-08 16:02:34,081][gdb3][DEBUG ] detect machine type
+[2017-07-08 16:02:34,083][gdb3][DEBUG ] find the location of an executable
+[2017-07-08 16:02:34,099][gdb3][DEBUG ] connection detected need for sudo
+[2017-07-08 16:02:34,112][gdb3][DEBUG ] connected to host: gdb3 
+[2017-07-08 16:02:34,113][gdb3][DEBUG ] detect platform information from remote host
+[2017-07-08 16:02:34,129][gdb3][DEBUG ] detect machine type
+[2017-07-08 16:02:34,132][ceph_deploy.install][INFO  ] Distro info: Ubuntu 16.04 xenial
+[2017-07-08 16:02:34,132][gdb3][INFO  ] purging data on gdb3
+[2017-07-08 16:02:34,133][gdb3][INFO  ] Running command: sudo rm -rf --one-file-system -- /var/lib/ceph
+[2017-07-08 16:02:34,146][gdb3][INFO  ] Running command: sudo rm -rf --one-file-system -- /etc/ceph/
+[2017-07-08 16:02:34,315][ceph_deploy.conf][DEBUG ] found configuration file at: /home/ubuntu/.cephdeploy.conf
+[2017-07-08 16:02:34,315][ceph_deploy.cli][INFO  ] Invoked (1.5.37): /home/ubuntu/bin/ceph-deploy forgetkeys
+[2017-07-08 16:02:34,315][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2017-07-08 16:02:34,315][ceph_deploy.cli][INFO  ]  username                      : None
+[2017-07-08 16:02:34,315][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2017-07-08 16:02:34,315][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2017-07-08 16:02:34,315][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2017-07-08 16:02:34,315][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf instance at 0x7f82b6644a28>
+[2017-07-08 16:02:34,316][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2017-07-08 16:02:34,316][ceph_deploy.cli][INFO  ]  func                          : <function forgetkeys at 0x7f82b6f07848>
+[2017-07-08 16:02:34,316][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2017-07-08 16:02:34,316][ceph_deploy.cli][INFO  ]  default_release               : False
+[2017-07-08 16:02:54,036][ceph_deploy.conf][DEBUG ] found configuration file at: /home/ubuntu/.cephdeploy.conf
+[2017-07-08 16:02:54,037][ceph_deploy.cli][INFO  ] Invoked (1.5.37): /home/ubuntu/bin/ceph-deploy new gdb3
+[2017-07-08 16:02:54,037][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2017-07-08 16:02:54,037][ceph_deploy.cli][INFO  ]  username                      : None
+[2017-07-08 16:02:54,037][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2017-07-08 16:02:54,037][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2017-07-08 16:02:54,037][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2017-07-08 16:02:54,037][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf instance at 0x7fa02b4535a8>
+[2017-07-08 16:02:54,037][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2017-07-08 16:02:54,037][ceph_deploy.cli][INFO  ]  ssh_copykey                   : True
+[2017-07-08 16:02:54,037][ceph_deploy.cli][INFO  ]  mon                           : ['gdb3']
+[2017-07-08 16:02:54,037][ceph_deploy.cli][INFO  ]  func                          : <function new at 0x7fa02bad7758>
+[2017-07-08 16:02:54,038][ceph_deploy.cli][INFO  ]  public_network                : None
+[2017-07-08 16:02:54,038][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2017-07-08 16:02:54,038][ceph_deploy.cli][INFO  ]  cluster_network               : None
+[2017-07-08 16:02:54,038][ceph_deploy.cli][INFO  ]  default_release               : False
+[2017-07-08 16:02:54,038][ceph_deploy.cli][INFO  ]  fsid                          : None
+[2017-07-08 16:02:54,038][ceph_deploy.new][DEBUG ] Creating new cluster named ceph
+[2017-07-08 16:02:54,038][ceph_deploy.new][INFO  ] making sure passwordless SSH succeeds
+[2017-07-08 16:02:54,064][gdb3][DEBUG ] connection detected need for sudo
+[2017-07-08 16:02:54,078][gdb3][DEBUG ] connected to host: gdb3 
+[2017-07-08 16:02:54,078][gdb3][DEBUG ] detect platform information from remote host
+[2017-07-08 16:02:54,095][gdb3][DEBUG ] detect machine type
+[2017-07-08 16:02:54,097][gdb3][DEBUG ] find the location of an executable
+[2017-07-08 16:02:54,098][gdb3][INFO  ] Running command: sudo /bin/ip link show
+[2017-07-08 16:02:54,109][gdb3][INFO  ] Running command: sudo /bin/ip addr show
+[2017-07-08 16:02:54,116][gdb3][DEBUG ] IP addresses found: [u'172.31.22.186']
+[2017-07-08 16:02:54,116][ceph_deploy.new][DEBUG ] Resolving host gdb3
+[2017-07-08 16:02:54,116][ceph_deploy.new][DEBUG ] Monitor gdb3 at 172.31.22.186
+[2017-07-08 16:02:54,116][ceph_deploy.new][DEBUG ] Monitor initial members are ['gdb3']
+[2017-07-08 16:02:54,116][ceph_deploy.new][DEBUG ] Monitor addrs are ['172.31.22.186']
+[2017-07-08 16:02:54,116][ceph_deploy.new][DEBUG ] Creating a random mon key...
+[2017-07-08 16:02:54,116][ceph_deploy.new][DEBUG ] Writing monitor keyring to ceph.mon.keyring...
+[2017-07-08 16:02:54,117][ceph_deploy.new][DEBUG ] Writing initial config to ceph.conf...
+[2017-07-08 16:02:54,281][ceph_deploy.conf][DEBUG ] found configuration file at: /home/ubuntu/.cephdeploy.conf
+[2017-07-08 16:02:54,281][ceph_deploy.cli][INFO  ] Invoked (1.5.37): /home/ubuntu/bin/ceph-deploy mon create-initial
+[2017-07-08 16:02:54,281][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2017-07-08 16:02:54,281][ceph_deploy.cli][INFO  ]  username                      : None
+[2017-07-08 16:02:54,281][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2017-07-08 16:02:54,281][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2017-07-08 16:02:54,281][ceph_deploy.cli][INFO  ]  subcommand                    : create-initial
+[2017-07-08 16:02:54,281][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2017-07-08 16:02:54,281][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf instance at 0x7f834a665ea8>
+[2017-07-08 16:02:54,282][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2017-07-08 16:02:54,282][ceph_deploy.cli][INFO  ]  func                          : <function mon at 0x7f834a63ab18>
+[2017-07-08 16:02:54,282][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2017-07-08 16:02:54,282][ceph_deploy.cli][INFO  ]  keyrings                      : None
+[2017-07-08 16:02:54,282][ceph_deploy.cli][INFO  ]  default_release               : False
+[2017-07-08 16:02:54,282][ceph_deploy.mon][DEBUG ] Deploying mon, cluster ceph hosts gdb3
+[2017-07-08 16:02:54,283][ceph_deploy.mon][DEBUG ] detecting platform for host gdb3 ...
+[2017-07-08 16:02:54,309][gdb3][DEBUG ] connection detected need for sudo
+[2017-07-08 16:02:54,322][gdb3][DEBUG ] connected to host: gdb3 
+[2017-07-08 16:02:54,323][gdb3][DEBUG ] detect platform information from remote host
+[2017-07-08 16:02:54,339][gdb3][DEBUG ] detect machine type
+[2017-07-08 16:02:54,342][gdb3][DEBUG ] find the location of an executable
+[2017-07-08 16:02:54,342][ceph_deploy.mon][INFO  ] distro info: Ubuntu 16.04 xenial
+[2017-07-08 16:02:54,342][gdb3][DEBUG ] determining if provided host has same hostname in remote
+[2017-07-08 16:02:54,342][gdb3][DEBUG ] get remote short hostname
+[2017-07-08 16:02:54,343][gdb3][DEBUG ] deploying mon to gdb3
+[2017-07-08 16:02:54,343][gdb3][DEBUG ] get remote short hostname
+[2017-07-08 16:02:54,343][gdb3][DEBUG ] remote hostname: gdb3
+[2017-07-08 16:02:54,344][gdb3][DEBUG ] write cluster configuration to /etc/ceph/{cluster}.conf
+[2017-07-08 16:02:54,345][gdb3][DEBUG ] create the mon path if it does not exist
+[2017-07-08 16:02:54,345][gdb3][DEBUG ] checking for done path: /var/lib/ceph/mon/ceph-gdb3/done
+[2017-07-08 16:02:54,346][gdb3][DEBUG ] done path does not exist: /var/lib/ceph/mon/ceph-gdb3/done
+[2017-07-08 16:02:54,346][gdb3][INFO  ] creating keyring file: /var/lib/ceph/tmp/ceph-gdb3.mon.keyring
+[2017-07-08 16:02:54,346][gdb3][DEBUG ] create the monitor keyring file
+[2017-07-08 16:02:54,347][gdb3][INFO  ] Running command: sudo ceph-mon --cluster ceph --mkfs -i gdb3 --keyring /var/lib/ceph/tmp/ceph-gdb3.mon.keyring --setuser 64045 --setgroup 64045
+[2017-07-08 16:02:54,417][gdb3][DEBUG ] ceph-mon: mon.noname-a 172.31.22.186:6789/0 is local, renaming to mon.gdb3
+[2017-07-08 16:02:54,417][gdb3][DEBUG ] ceph-mon: set fsid to bebb814c-d742-4363-a6d4-06fe674ebded
+[2017-07-08 16:02:54,417][gdb3][DEBUG ] ceph-mon: created monfs at /var/lib/ceph/mon/ceph-gdb3 for mon.gdb3
+[2017-07-08 16:02:54,418][gdb3][INFO  ] unlinking keyring file /var/lib/ceph/tmp/ceph-gdb3.mon.keyring
+[2017-07-08 16:02:54,418][gdb3][DEBUG ] create a done file to avoid re-doing the mon deployment
+[2017-07-08 16:02:54,418][gdb3][DEBUG ] create the init path if it does not exist
+[2017-07-08 16:02:54,420][gdb3][INFO  ] Running command: sudo systemctl enable ceph.target
+[2017-07-08 16:02:54,487][gdb3][INFO  ] Running command: sudo systemctl enable ceph-mon@gdb3
+[2017-07-08 16:02:54,558][gdb3][INFO  ] Running command: sudo systemctl start ceph-mon@gdb3
+[2017-07-08 16:02:56,628][gdb3][INFO  ] Running command: sudo ceph --cluster=ceph --admin-daemon /var/run/ceph/ceph-mon.gdb3.asok mon_status
+[2017-07-08 16:02:56,743][gdb3][DEBUG ] ********************************************************************************
+[2017-07-08 16:02:56,743][gdb3][DEBUG ] status for monitor: mon.gdb3
+[2017-07-08 16:02:56,743][gdb3][DEBUG ] {
+[2017-07-08 16:02:56,743][gdb3][DEBUG ]   "election_epoch": 4, 
+[2017-07-08 16:02:56,743][gdb3][DEBUG ]   "extra_probe_peers": [], 
+[2017-07-08 16:02:56,743][gdb3][DEBUG ]   "features": {
+[2017-07-08 16:02:56,743][gdb3][DEBUG ]     "quorum_con": "1152323339925389307", 
+[2017-07-08 16:02:56,743][gdb3][DEBUG ]     "quorum_mon": [
+[2017-07-08 16:02:56,744][gdb3][DEBUG ]       "kraken", 
+[2017-07-08 16:02:56,744][gdb3][DEBUG ]       "luminous"
+[2017-07-08 16:02:56,744][gdb3][DEBUG ]     ], 
+[2017-07-08 16:02:56,744][gdb3][DEBUG ]     "required_con": "153140804152475648", 
+[2017-07-08 16:02:56,744][gdb3][DEBUG ]     "required_mon": [
+[2017-07-08 16:02:56,744][gdb3][DEBUG ]       "kraken", 
+[2017-07-08 16:02:56,744][gdb3][DEBUG ]       "luminous"
+[2017-07-08 16:02:56,744][gdb3][DEBUG ]     ]
+[2017-07-08 16:02:56,744][gdb3][DEBUG ]   }, 
+[2017-07-08 16:02:56,744][gdb3][DEBUG ]   "monmap": {
+[2017-07-08 16:02:56,744][gdb3][DEBUG ]     "created": "2017-07-08 16:02:54.393701", 
+[2017-07-08 16:02:56,744][gdb3][DEBUG ]     "epoch": 2, 
+[2017-07-08 16:02:56,744][gdb3][DEBUG ]     "features": {
+[2017-07-08 16:02:56,744][gdb3][DEBUG ]       "optional": [], 
+[2017-07-08 16:02:56,744][gdb3][DEBUG ]       "persistent": [
+[2017-07-08 16:02:56,744][gdb3][DEBUG ]         "kraken", 
+[2017-07-08 16:02:56,744][gdb3][DEBUG ]         "luminous"
+[2017-07-08 16:02:56,745][gdb3][DEBUG ]       ]
+[2017-07-08 16:02:56,745][gdb3][DEBUG ]     }, 
+[2017-07-08 16:02:56,745][gdb3][DEBUG ]     "fsid": "bebb814c-d742-4363-a6d4-06fe674ebded", 
+[2017-07-08 16:02:56,745][gdb3][DEBUG ]     "modified": "2017-07-08 16:02:54.668867", 
+[2017-07-08 16:02:56,745][gdb3][DEBUG ]     "mons": [
+[2017-07-08 16:02:56,745][gdb3][DEBUG ]       {
+[2017-07-08 16:02:56,745][gdb3][DEBUG ]         "addr": "172.31.22.186:6789/0", 
+[2017-07-08 16:02:56,745][gdb3][DEBUG ]         "name": "gdb3", 
+[2017-07-08 16:02:56,745][gdb3][DEBUG ]         "public_addr": "172.31.22.186:6789/0", 
+[2017-07-08 16:02:56,745][gdb3][DEBUG ]         "rank": 0
+[2017-07-08 16:02:56,745][gdb3][DEBUG ]       }
+[2017-07-08 16:02:56,745][gdb3][DEBUG ]     ]
+[2017-07-08 16:02:56,745][gdb3][DEBUG ]   }, 
+[2017-07-08 16:02:56,745][gdb3][DEBUG ]   "name": "gdb3", 
+[2017-07-08 16:02:56,745][gdb3][DEBUG ]   "outside_quorum": [], 
+[2017-07-08 16:02:56,745][gdb3][DEBUG ]   "quorum": [
+[2017-07-08 16:02:56,745][gdb3][DEBUG ]     0
+[2017-07-08 16:02:56,746][gdb3][DEBUG ]   ], 
+[2017-07-08 16:02:56,746][gdb3][DEBUG ]   "rank": 0, 
+[2017-07-08 16:02:56,746][gdb3][DEBUG ]   "state": "leader", 
+[2017-07-08 16:02:56,746][gdb3][DEBUG ]   "sync_provider": []
+[2017-07-08 16:02:56,746][gdb3][DEBUG ] }
+[2017-07-08 16:02:56,746][gdb3][DEBUG ] ********************************************************************************
+[2017-07-08 16:02:56,746][gdb3][INFO  ] monitor: mon.gdb3 is running
+[2017-07-08 16:02:56,747][gdb3][INFO  ] Running command: sudo ceph --cluster=ceph --admin-daemon /var/run/ceph/ceph-mon.gdb3.asok mon_status
+[2017-07-08 16:02:56,812][ceph_deploy.mon][INFO  ] processing monitor mon.gdb3
+[2017-07-08 16:02:56,827][gdb3][DEBUG ] connection detected need for sudo
+[2017-07-08 16:02:56,840][gdb3][DEBUG ] connected to host: gdb3 
+[2017-07-08 16:02:56,841][gdb3][DEBUG ] detect platform information from remote host
+[2017-07-08 16:02:56,858][gdb3][DEBUG ] detect machine type
+[2017-07-08 16:02:56,860][gdb3][DEBUG ] find the location of an executable
+[2017-07-08 16:02:56,861][gdb3][INFO  ] Running command: sudo ceph --cluster=ceph --admin-daemon /var/run/ceph/ceph-mon.gdb3.asok mon_status
+[2017-07-08 16:02:56,926][ceph_deploy.mon][INFO  ] mon.gdb3 monitor has reached quorum!
+[2017-07-08 16:02:56,926][ceph_deploy.mon][INFO  ] all initial monitors are running and have formed quorum
+[2017-07-08 16:02:56,926][ceph_deploy.mon][INFO  ] Running gatherkeys...
+[2017-07-08 16:02:56,928][ceph_deploy.gatherkeys][INFO  ] Storing keys in temp directory /tmp/tmpVZKMpc
+[2017-07-08 16:02:56,943][gdb3][DEBUG ] connection detected need for sudo
+[2017-07-08 16:02:56,956][gdb3][DEBUG ] connected to host: gdb3 
+[2017-07-08 16:02:56,956][gdb3][DEBUG ] detect platform information from remote host
+[2017-07-08 16:02:56,973][gdb3][DEBUG ] detect machine type
+[2017-07-08 16:02:56,975][gdb3][DEBUG ] get remote short hostname
+[2017-07-08 16:02:56,975][gdb3][DEBUG ] fetch remote file
+[2017-07-08 16:02:56,976][gdb3][INFO  ] Running command: sudo /usr/bin/ceph --connect-timeout=25 --cluster=ceph --admin-daemon=/var/run/ceph/ceph-mon.gdb3.asok mon_status
+[2017-07-08 16:02:57,042][gdb3][INFO  ] Running command: sudo /usr/bin/ceph --connect-timeout=25 --cluster=ceph --name mon. --keyring=/var/lib/ceph/mon/ceph-gdb3/keyring auth get client.admin
+[2017-07-08 16:02:57,258][gdb3][INFO  ] Running command: sudo /usr/bin/ceph --connect-timeout=25 --cluster=ceph --name mon. --keyring=/var/lib/ceph/mon/ceph-gdb3/keyring auth get-or-create client.admin osd allow * mds allow * mon allow * mgr allow *
+[2017-07-08 16:02:57,424][gdb3][INFO  ] Running command: sudo /usr/bin/ceph --connect-timeout=25 --cluster=ceph --name mon. --keyring=/var/lib/ceph/mon/ceph-gdb3/keyring auth get client.bootstrap-mds
+[2017-07-08 16:02:57,590][gdb3][INFO  ] Running command: sudo /usr/bin/ceph --connect-timeout=25 --cluster=ceph --name mon. --keyring=/var/lib/ceph/mon/ceph-gdb3/keyring auth get-or-create client.bootstrap-mds mon allow profile bootstrap-mds
+[2017-07-08 16:02:57,757][gdb3][INFO  ] Running command: sudo /usr/bin/ceph --connect-timeout=25 --cluster=ceph --name mon. --keyring=/var/lib/ceph/mon/ceph-gdb3/keyring auth get client.bootstrap-mgr
+[2017-07-08 16:02:57,922][gdb3][INFO  ] Running command: sudo /usr/bin/ceph --connect-timeout=25 --cluster=ceph --name mon. --keyring=/var/lib/ceph/mon/ceph-gdb3/keyring auth get-or-create client.bootstrap-mgr mon allow profile bootstrap-mgr
+[2017-07-08 16:02:58,089][gdb3][INFO  ] Running command: sudo /usr/bin/ceph --connect-timeout=25 --cluster=ceph --name mon. --keyring=/var/lib/ceph/mon/ceph-gdb3/keyring auth get client.bootstrap-osd
+[2017-07-08 16:02:58,255][gdb3][INFO  ] Running command: sudo /usr/bin/ceph --connect-timeout=25 --cluster=ceph --name mon. --keyring=/var/lib/ceph/mon/ceph-gdb3/keyring auth get-or-create client.bootstrap-osd mon allow profile bootstrap-osd
+[2017-07-08 16:02:58,421][gdb3][INFO  ] Running command: sudo /usr/bin/ceph --connect-timeout=25 --cluster=ceph --name mon. --keyring=/var/lib/ceph/mon/ceph-gdb3/keyring auth get client.bootstrap-rgw
+[2017-07-08 16:02:58,587][gdb3][INFO  ] Running command: sudo /usr/bin/ceph --connect-timeout=25 --cluster=ceph --name mon. --keyring=/var/lib/ceph/mon/ceph-gdb3/keyring auth get-or-create client.bootstrap-rgw mon allow profile bootstrap-rgw
+[2017-07-08 16:02:58,752][ceph_deploy.gatherkeys][INFO  ] Storing ceph.client.admin.keyring
+[2017-07-08 16:02:58,753][ceph_deploy.gatherkeys][INFO  ] Storing ceph.bootstrap-mds.keyring
+[2017-07-08 16:02:58,753][ceph_deploy.gatherkeys][INFO  ] Replacing 'ceph.bootstrap-mgr.keyring' and backing up old key as 'ceph.bootstrap-mgr.keyring-20170708160258'
+[2017-07-08 16:02:58,754][ceph_deploy.gatherkeys][INFO  ] keyring 'ceph.mon.keyring' already exists
+[2017-07-08 16:02:58,754][ceph_deploy.gatherkeys][INFO  ] Storing ceph.bootstrap-osd.keyring
+[2017-07-08 16:02:58,754][ceph_deploy.gatherkeys][INFO  ] Storing ceph.bootstrap-rgw.keyring
+[2017-07-08 16:02:58,754][ceph_deploy.gatherkeys][INFO  ] Destroy temp directory /tmp/tmpVZKMpc
+[2017-07-08 16:03:37,311][ceph_deploy.conf][DEBUG ] found configuration file at: /home/ubuntu/.cephdeploy.conf
+[2017-07-08 16:03:37,311][ceph_deploy.cli][INFO  ] Invoked (1.5.37): /home/ubuntu/bin/ceph-deploy --overwrite-conf osd create --zap-disk gdb1:/dev/xvdb
+[2017-07-08 16:03:37,311][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2017-07-08 16:03:37,311][ceph_deploy.cli][INFO  ]  username                      : None
+[2017-07-08 16:03:37,311][ceph_deploy.cli][INFO  ]  block_db                      : None
+[2017-07-08 16:03:37,311][ceph_deploy.cli][INFO  ]  disk                          : [('gdb1', '/dev/xvdb', None)]
+[2017-07-08 16:03:37,312][ceph_deploy.cli][INFO  ]  dmcrypt                       : False
+[2017-07-08 16:03:37,312][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2017-07-08 16:03:37,312][ceph_deploy.cli][INFO  ]  bluestore                     : None
+[2017-07-08 16:03:37,312][ceph_deploy.cli][INFO  ]  block_wal                     : None
+[2017-07-08 16:03:37,312][ceph_deploy.cli][INFO  ]  overwrite_conf                : True
+[2017-07-08 16:03:37,312][ceph_deploy.cli][INFO  ]  subcommand                    : create
+[2017-07-08 16:03:37,312][ceph_deploy.cli][INFO  ]  dmcrypt_key_dir               : /etc/ceph/dmcrypt-keys
+[2017-07-08 16:03:37,312][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2017-07-08 16:03:37,312][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf instance at 0x7fdc5d70e950>
+[2017-07-08 16:03:37,312][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2017-07-08 16:03:37,312][ceph_deploy.cli][INFO  ]  fs_type                       : xfs
+[2017-07-08 16:03:37,312][ceph_deploy.cli][INFO  ]  func                          : <function osd at 0x7fdc5d964aa0>
+[2017-07-08 16:03:37,312][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2017-07-08 16:03:37,312][ceph_deploy.cli][INFO  ]  default_release               : False
+[2017-07-08 16:03:37,312][ceph_deploy.cli][INFO  ]  zap_disk                      : True
+[2017-07-08 16:03:37,313][ceph_deploy.osd][DEBUG ] Preparing cluster ceph disks gdb1:/dev/xvdb:
+[2017-07-08 16:03:37,623][gdb1][DEBUG ] connection detected need for sudo
+[2017-07-08 16:03:37,848][gdb1][DEBUG ] connected to host: gdb1 
+[2017-07-08 16:03:37,848][gdb1][DEBUG ] detect platform information from remote host
+[2017-07-08 16:03:37,879][gdb1][DEBUG ] detect machine type
+[2017-07-08 16:03:37,884][gdb1][DEBUG ] find the location of an executable
+[2017-07-08 16:03:37,884][ceph_deploy.osd][INFO  ] Distro info: Ubuntu 16.04 xenial
+[2017-07-08 16:03:37,884][ceph_deploy.osd][DEBUG ] Deploying osd to gdb1
+[2017-07-08 16:03:37,885][gdb1][DEBUG ] write cluster configuration to /etc/ceph/{cluster}.conf
+[2017-07-08 16:03:37,887][gdb1][WARNING] osd keyring does not exist yet, creating one
+[2017-07-08 16:03:37,887][gdb1][DEBUG ] create a keyring file
+[2017-07-08 16:03:37,889][ceph_deploy.osd][DEBUG ] Preparing host gdb1 disk /dev/xvdb journal None activate True
+[2017-07-08 16:03:37,889][gdb1][DEBUG ] find the location of an executable
+[2017-07-08 16:03:37,891][gdb1][INFO  ] Running command: sudo /usr/local/bin/ceph-disk -v prepare --zap-disk --cluster ceph --fs-type xfs -- /dev/xvdb
+[2017-07-08 16:03:38,212][gdb1][WARNING] command: Running command: /usr/bin/ceph-osd --cluster=ceph --show-config-value=fsid
+[2017-07-08 16:03:38,376][gdb1][WARNING] command: Running command: /usr/bin/ceph-osd --check-allows-journal -i 0 --cluster ceph --setuser ceph --setgroup ceph
+[2017-07-08 16:03:38,377][gdb1][WARNING] command: Running command: /usr/bin/ceph-osd --check-wants-journal -i 0 --cluster ceph --setuser ceph --setgroup ceph
+[2017-07-08 16:03:38,377][gdb1][WARNING] command: Running command: /usr/bin/ceph-osd --check-needs-journal -i 0 --cluster ceph --setuser ceph --setgroup ceph
+[2017-07-08 16:03:38,392][gdb1][WARNING] get_dm_uuid: get_dm_uuid /dev/xvdb uuid path is /sys/dev/block/202:16/dm/uuid
+[2017-07-08 16:03:38,392][gdb1][WARNING] set_type: Will colocate journal with data on /dev/xvdb
+[2017-07-08 16:03:38,393][gdb1][WARNING] command: Running command: /usr/bin/ceph-osd --cluster=ceph --show-config-value=osd_journal_size
+[2017-07-08 16:03:38,400][gdb1][WARNING] get_dm_uuid: get_dm_uuid /dev/xvdb uuid path is /sys/dev/block/202:16/dm/uuid
+[2017-07-08 16:03:38,400][gdb1][WARNING] get_dm_uuid: get_dm_uuid /dev/xvdb uuid path is /sys/dev/block/202:16/dm/uuid
+[2017-07-08 16:03:38,400][gdb1][WARNING] get_dm_uuid: get_dm_uuid /dev/xvdb uuid path is /sys/dev/block/202:16/dm/uuid
+[2017-07-08 16:03:38,400][gdb1][WARNING] command: Running command: /usr/bin/ceph-conf --cluster=ceph --name=osd. --lookup osd_mkfs_options_xfs
+[2017-07-08 16:03:38,416][gdb1][WARNING] command: Running command: /usr/bin/ceph-conf --cluster=ceph --name=osd. --lookup osd_fs_mkfs_options_xfs
+[2017-07-08 16:03:38,419][gdb1][WARNING] command: Running command: /usr/bin/ceph-conf --cluster=ceph --name=osd. --lookup osd_mount_options_xfs
+[2017-07-08 16:03:38,435][gdb1][WARNING] command: Running command: /usr/bin/ceph-conf --cluster=ceph --name=osd. --lookup osd_fs_mount_options_xfs
+[2017-07-08 16:03:38,439][gdb1][WARNING] get_dm_uuid: get_dm_uuid /dev/xvdb uuid path is /sys/dev/block/202:16/dm/uuid
+[2017-07-08 16:03:38,439][gdb1][WARNING] zap: Writing zeros to existing partitions on /dev/xvdb
+[2017-07-08 16:03:38,439][gdb1][WARNING] get_dm_uuid: get_dm_uuid /dev/xvdb uuid path is /sys/dev/block/202:16/dm/uuid
+[2017-07-08 16:03:38,439][gdb1][WARNING] zap: Zapping partition table on /dev/xvdb
+[2017-07-08 16:03:38,442][gdb1][WARNING] command_check_call: Running command: /sbin/sgdisk --zap-all -- /dev/xvdb
+[2017-07-08 16:03:38,450][gdb1][WARNING] Caution: invalid backup GPT header, but valid main header; regenerating
+[2017-07-08 16:03:38,450][gdb1][WARNING] backup header from main header.
+[2017-07-08 16:03:38,450][gdb1][WARNING] 
+[2017-07-08 16:03:39,517][gdb1][DEBUG ] ****************************************************************************
+[2017-07-08 16:03:39,517][gdb1][DEBUG ] Caution: Found protective or hybrid MBR and corrupt GPT. Using GPT, but disk
+[2017-07-08 16:03:39,517][gdb1][DEBUG ] verification and recovery are STRONGLY recommended.
+[2017-07-08 16:03:39,517][gdb1][DEBUG ] ****************************************************************************
+[2017-07-08 16:03:39,518][gdb1][DEBUG ] GPT data structures destroyed! You may now partition the disk using fdisk or
+[2017-07-08 16:03:39,518][gdb1][DEBUG ] other utilities.
+[2017-07-08 16:03:39,518][gdb1][WARNING] command_check_call: Running command: /sbin/sgdisk --clear --mbrtogpt -- /dev/xvdb
+[2017-07-08 16:03:40,484][gdb1][DEBUG ] Creating new GPT entries.
+[2017-07-08 16:03:40,484][gdb1][DEBUG ] The operation has completed successfully.
+[2017-07-08 16:03:40,485][gdb1][WARNING] update_partition: Calling partprobe on zapped device /dev/xvdb
+[2017-07-08 16:03:40,485][gdb1][WARNING] command_check_call: Running command: /sbin/udevadm settle --timeout=600
+[2017-07-08 16:03:40,500][gdb1][WARNING] command: Running command: /usr/bin/flock -s /dev/xvdb /sbin/partprobe /dev/xvdb
+[2017-07-08 16:03:40,532][gdb1][WARNING] command_check_call: Running command: /sbin/udevadm settle --timeout=600
+[2017-07-08 16:03:40,548][gdb1][WARNING] get_dm_uuid: get_dm_uuid /dev/xvdb uuid path is /sys/dev/block/202:16/dm/uuid
+[2017-07-08 16:03:40,548][gdb1][WARNING] get_dm_uuid: get_dm_uuid /dev/xvdb uuid path is /sys/dev/block/202:16/dm/uuid
+[2017-07-08 16:03:40,548][gdb1][WARNING] ptype_tobe_for_name: name = journal
+[2017-07-08 16:03:40,548][gdb1][WARNING] get_dm_uuid: get_dm_uuid /dev/xvdb uuid path is /sys/dev/block/202:16/dm/uuid
+[2017-07-08 16:03:40,548][gdb1][WARNING] create_partition: Creating journal partition num 2 size 5120 on /dev/xvdb
+[2017-07-08 16:03:40,548][gdb1][WARNING] command_check_call: Running command: /sbin/sgdisk --new=2:0:+5120M --change-name=2:ceph journal --partition-guid=2:6104e77a-eeea-4bd4-be67-095d206f5786 --typecode=2:45b0969e-9b03-4f30-b4c6-b4b80ceff106 --mbrtogpt -- /dev/xvdb
+[2017-07-08 16:03:41,565][gdb1][DEBUG ] Setting name!
+[2017-07-08 16:03:41,565][gdb1][DEBUG ] partNum is 1
+[2017-07-08 16:03:41,565][gdb1][DEBUG ] REALLY setting name!
+[2017-07-08 16:03:41,566][gdb1][DEBUG ] The operation has completed successfully.
+[2017-07-08 16:03:41,566][gdb1][WARNING] update_partition: Calling partprobe on created device /dev/xvdb
+[2017-07-08 16:03:41,566][gdb1][WARNING] command_check_call: Running command: /sbin/udevadm settle --timeout=600
+[2017-07-08 16:03:41,780][gdb1][WARNING] command: Running command: /usr/bin/flock -s /dev/xvdb /sbin/partprobe /dev/xvdb
+[2017-07-08 16:03:41,995][gdb1][WARNING] command_check_call: Running command: /sbin/udevadm settle --timeout=600
+[2017-07-08 16:03:42,059][gdb1][WARNING] get_dm_uuid: get_dm_uuid /dev/xvdb uuid path is /sys/dev/block/202:16/dm/uuid
+[2017-07-08 16:03:42,059][gdb1][WARNING] get_dm_uuid: get_dm_uuid /dev/xvdb uuid path is /sys/dev/block/202:16/dm/uuid
+[2017-07-08 16:03:42,059][gdb1][WARNING] get_dm_uuid: get_dm_uuid /dev/xvdb2 uuid path is /sys/dev/block/202:18/dm/uuid
+[2017-07-08 16:03:42,059][gdb1][WARNING] prepare_device: Journal is GPT partition /dev/disk/by-partuuid/6104e77a-eeea-4bd4-be67-095d206f5786
+[2017-07-08 16:03:42,059][gdb1][WARNING] command_check_call: Running command: /sbin/sgdisk --typecode=2:45b0969e-9b03-4f30-b4c6-b4b80ceff106 -- /dev/xvdb
+[2017-07-08 16:03:43,076][gdb1][DEBUG ] The operation has completed successfully.
+[2017-07-08 16:03:43,076][gdb1][WARNING] update_partition: Calling partprobe on prepared device /dev/xvdb
+[2017-07-08 16:03:43,076][gdb1][WARNING] command_check_call: Running command: /sbin/udevadm settle --timeout=600
+[2017-07-08 16:03:43,291][gdb1][WARNING] command: Running command: /usr/bin/flock -s /dev/xvdb /sbin/partprobe /dev/xvdb
+[2017-07-08 16:03:43,505][gdb1][WARNING] command_check_call: Running command: /sbin/udevadm settle --timeout=600
+[2017-07-08 16:03:43,720][gdb1][WARNING] prepare_device: Journal is GPT partition /dev/disk/by-partuuid/6104e77a-eeea-4bd4-be67-095d206f5786
+[2017-07-08 16:03:43,720][gdb1][WARNING] get_dm_uuid: get_dm_uuid /dev/xvdb uuid path is /sys/dev/block/202:16/dm/uuid
+[2017-07-08 16:03:43,720][gdb1][WARNING] set_data_partition: Creating osd partition on /dev/xvdb
+[2017-07-08 16:03:43,720][gdb1][WARNING] get_dm_uuid: get_dm_uuid /dev/xvdb uuid path is /sys/dev/block/202:16/dm/uuid
+[2017-07-08 16:03:43,720][gdb1][WARNING] ptype_tobe_for_name: name = data
+[2017-07-08 16:03:43,720][gdb1][WARNING] get_dm_uuid: get_dm_uuid /dev/xvdb uuid path is /sys/dev/block/202:16/dm/uuid
+[2017-07-08 16:03:43,720][gdb1][WARNING] create_partition: Creating data partition num 1 size 0 on /dev/xvdb
+[2017-07-08 16:03:43,720][gdb1][WARNING] command_check_call: Running command: /sbin/sgdisk --largest-new=1 --change-name=1:ceph data --partition-guid=1:7dd59f56-c0c9-4dbf-b7c2-3d4491e8ff53 --typecode=1:89c57f98-2fe5-4dc0-89c1-f3ad0ceff2be --mbrtogpt -- /dev/xvdb
+[2017-07-08 16:03:44,737][gdb1][DEBUG ] Setting name!
+[2017-07-08 16:03:44,737][gdb1][DEBUG ] partNum is 0
+[2017-07-08 16:03:44,737][gdb1][DEBUG ] REALLY setting name!
+[2017-07-08 16:03:44,737][gdb1][DEBUG ] The operation has completed successfully.
+[2017-07-08 16:03:44,738][gdb1][WARNING] update_partition: Calling partprobe on created device /dev/xvdb
+[2017-07-08 16:03:44,738][gdb1][WARNING] command_check_call: Running command: /sbin/udevadm settle --timeout=600
+[2017-07-08 16:03:44,952][gdb1][WARNING] command: Running command: /usr/bin/flock -s /dev/xvdb /sbin/partprobe /dev/xvdb
+[2017-07-08 16:03:45,167][gdb1][WARNING] command_check_call: Running command: /sbin/udevadm settle --timeout=600
+[2017-07-08 16:03:45,174][gdb1][WARNING] get_dm_uuid: get_dm_uuid /dev/xvdb uuid path is /sys/dev/block/202:16/dm/uuid
+[2017-07-08 16:03:45,174][gdb1][WARNING] get_dm_uuid: get_dm_uuid /dev/xvdb uuid path is /sys/dev/block/202:16/dm/uuid
+[2017-07-08 16:03:45,174][gdb1][WARNING] get_dm_uuid: get_dm_uuid /dev/xvdb1 uuid path is /sys/dev/block/202:17/dm/uuid
+[2017-07-08 16:03:45,174][gdb1][WARNING] populate_data_path_device: Creating xfs fs on /dev/xvdb1
+[2017-07-08 16:03:45,174][gdb1][WARNING] command_check_call: Running command: /sbin/mkfs -t xfs -f -i size=2048 -- /dev/xvdb1
+[2017-07-08 16:03:45,790][gdb1][DEBUG ] meta-data=/dev/xvdb1             isize=2048   agcount=4, agsize=8060863 blks
+[2017-07-08 16:03:45,790][gdb1][DEBUG ]          =                       sectsz=512   attr=2, projid32bit=1
+[2017-07-08 16:03:45,790][gdb1][DEBUG ]          =                       crc=1        finobt=1, sparse=0
+[2017-07-08 16:03:45,791][gdb1][DEBUG ] data     =                       bsize=4096   blocks=32243451, imaxpct=25
+[2017-07-08 16:03:45,791][gdb1][DEBUG ]          =                       sunit=0      swidth=0 blks
+[2017-07-08 16:03:45,791][gdb1][DEBUG ] naming   =version 2              bsize=4096   ascii-ci=0 ftype=1
+[2017-07-08 16:03:45,791][gdb1][DEBUG ] log      =internal log           bsize=4096   blocks=15743, version=2
+[2017-07-08 16:03:45,791][gdb1][DEBUG ]          =                       sectsz=512   sunit=0 blks, lazy-count=1
+[2017-07-08 16:03:45,791][gdb1][DEBUG ] realtime =none                   extsz=4096   blocks=0, rtextents=0
+[2017-07-08 16:03:45,791][gdb1][WARNING] mount: Mounting /dev/xvdb1 on /var/lib/ceph/tmp/mnt.dB56ME with options noatime,inode64
+[2017-07-08 16:03:45,791][gdb1][WARNING] command_check_call: Running command: /bin/mount -t xfs -o noatime,inode64 -- /dev/xvdb1 /var/lib/ceph/tmp/mnt.dB56ME
+[2017-07-08 16:03:45,855][gdb1][WARNING] populate_data_path: Preparing osd data dir /var/lib/ceph/tmp/mnt.dB56ME
+[2017-07-08 16:03:45,855][gdb1][WARNING] command: Running command: /bin/chown -R ceph:ceph /var/lib/ceph/tmp/mnt.dB56ME/ceph_fsid.2590.tmp
+[2017-07-08 16:03:45,855][gdb1][WARNING] command: Running command: /bin/chown -R ceph:ceph /var/lib/ceph/tmp/mnt.dB56ME/fsid.2590.tmp
+[2017-07-08 16:03:45,855][gdb1][WARNING] command: Running command: /bin/chown -R ceph:ceph /var/lib/ceph/tmp/mnt.dB56ME/magic.2590.tmp
+[2017-07-08 16:03:45,855][gdb1][WARNING] command: Running command: /bin/chown -R ceph:ceph /var/lib/ceph/tmp/mnt.dB56ME/journal_uuid.2590.tmp
+[2017-07-08 16:03:45,855][gdb1][WARNING] adjust_symlink: Creating symlink /var/lib/ceph/tmp/mnt.dB56ME/journal -> /dev/disk/by-partuuid/6104e77a-eeea-4bd4-be67-095d206f5786
+[2017-07-08 16:03:45,856][gdb1][WARNING] command: Running command: /bin/chown -R ceph:ceph /var/lib/ceph/tmp/mnt.dB56ME
+[2017-07-08 16:03:45,856][gdb1][WARNING] unmount: Unmounting /var/lib/ceph/tmp/mnt.dB56ME
+[2017-07-08 16:03:45,856][gdb1][WARNING] command_check_call: Running command: /bin/umount -- /var/lib/ceph/tmp/mnt.dB56ME
+[2017-07-08 16:03:45,863][gdb1][WARNING] get_dm_uuid: get_dm_uuid /dev/xvdb uuid path is /sys/dev/block/202:16/dm/uuid
+[2017-07-08 16:03:45,863][gdb1][WARNING] command_check_call: Running command: /sbin/sgdisk --typecode=1:4fbd7e29-9d25-41b8-afd0-062c0ceff05d -- /dev/xvdb
+[2017-07-08 16:03:46,880][gdb1][DEBUG ] Warning: The kernel is still using the old partition table.
+[2017-07-08 16:03:46,880][gdb1][DEBUG ] The new table will be used at the next reboot or after you
+[2017-07-08 16:03:46,880][gdb1][DEBUG ] run partprobe(8) or kpartx(8)
+[2017-07-08 16:03:46,881][gdb1][DEBUG ] The operation has completed successfully.
+[2017-07-08 16:03:46,881][gdb1][WARNING] update_partition: Calling partprobe on prepared device /dev/xvdb
+[2017-07-08 16:03:46,881][gdb1][WARNING] command_check_call: Running command: /sbin/udevadm settle --timeout=600
+[2017-07-08 16:03:46,896][gdb1][WARNING] command: Running command: /usr/bin/flock -s /dev/xvdb /sbin/partprobe /dev/xvdb
+[2017-07-08 16:03:47,111][gdb1][WARNING] command_check_call: Running command: /sbin/udevadm settle --timeout=600
+[2017-07-08 16:03:47,112][gdb1][WARNING] command_check_call: Running command: /sbin/udevadm trigger --action=add --sysname-match xvdb1
+[2017-07-08 16:03:47,130][gdb1][INFO  ] Running command: sudo systemctl enable ceph.target
+[2017-07-08 16:03:52,249][gdb1][INFO  ] checking OSD status...
+[2017-07-08 16:03:52,249][gdb1][DEBUG ] find the location of an executable
+[2017-07-08 16:03:52,252][gdb1][INFO  ] Running command: sudo /usr/bin/ceph --cluster=ceph osd stat --format=json
+[2017-07-08 16:03:52,367][ceph_deploy.osd][DEBUG ] Host gdb1 is now ready for osd use.
+[2017-07-08 16:03:52,529][ceph_deploy.conf][DEBUG ] found configuration file at: /home/ubuntu/.cephdeploy.conf
+[2017-07-08 16:03:52,529][ceph_deploy.cli][INFO  ] Invoked (1.5.37): /home/ubuntu/bin/ceph-deploy admin gdb1 gdb3
+[2017-07-08 16:03:52,529][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2017-07-08 16:03:52,529][ceph_deploy.cli][INFO  ]  username                      : None
+[2017-07-08 16:03:52,529][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2017-07-08 16:03:52,529][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2017-07-08 16:03:52,529][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2017-07-08 16:03:52,529][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf instance at 0x7f2599103560>
+[2017-07-08 16:03:52,529][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2017-07-08 16:03:52,530][ceph_deploy.cli][INFO  ]  client                        : ['gdb1', 'gdb3']
+[2017-07-08 16:03:52,530][ceph_deploy.cli][INFO  ]  func                          : <function admin at 0x7f2599a1a938>
+[2017-07-08 16:03:52,530][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2017-07-08 16:03:52,530][ceph_deploy.cli][INFO  ]  default_release               : False
+[2017-07-08 16:03:52,530][ceph_deploy.admin][DEBUG ] Pushing admin keys and conf to gdb1
+[2017-07-08 16:03:52,769][gdb1][DEBUG ] connection detected need for sudo
+[2017-07-08 16:03:53,000][gdb1][DEBUG ] connected to host: gdb1 
+[2017-07-08 16:03:53,000][gdb1][DEBUG ] detect platform information from remote host
+[2017-07-08 16:03:53,016][gdb1][DEBUG ] detect machine type
+[2017-07-08 16:03:53,020][gdb1][DEBUG ] write cluster configuration to /etc/ceph/{cluster}.conf
+[2017-07-08 16:03:53,023][ceph_deploy.admin][DEBUG ] Pushing admin keys and conf to gdb3
+[2017-07-08 16:03:53,039][gdb3][DEBUG ] connection detected need for sudo
+[2017-07-08 16:03:53,052][gdb3][DEBUG ] connected to host: gdb3 
+[2017-07-08 16:03:53,053][gdb3][DEBUG ] detect platform information from remote host
+[2017-07-08 16:03:53,069][gdb3][DEBUG ] detect machine type
+[2017-07-08 16:03:53,071][gdb3][DEBUG ] write cluster configuration to /etc/ceph/{cluster}.conf

@@ -18,8 +18,7 @@ pool=rbdbench
 rbdname=image01
 #rbdname=fio_test
 rw=randwrite
-#bs=4k
-bs=1m
+bs=4k
 
 [rbd_iodepth32]
 iodepth=32

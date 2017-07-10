@@ -19,16 +19,13 @@ rm -f /var/lib/ceph/osd/ceph-*
 echo "rm /mnt/buddystore .."
 rm -rf /mnt/buddystore
 
-echo "create /mnt/buddystore .."
-mkdir /mnt/buddystore
-chown -R ceph:ceph /mnt/buddystore
-
-echo "rm /mnt/memstore .."
-rm -rf /mnt/memstore
-
-echo "create /mnt/memstore .."
-mkdir /mnt/memstore
-chown -R ceph:ceph /mnt/memstore
-
-
-
+#echo "create /mnt/buddystore .."
+#mkdir /mnt/buddystore
+#chown -R ceph:ceph /mnt/buddystore
+#
+#echo "rm /mnt/memstore .."
+#rm -rf /mnt/memstore
+#
+#echo "create /mnt/memstore .."
+#mkdir /mnt/memstore
+#chown -R ceph:ceph /mnt/memstore
